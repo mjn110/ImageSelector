@@ -83,3 +83,4 @@ C:\Users\Mohammad\Documents\GitHub\ImageSelector\obj\Debug\net10.0\ref\ImageSele
 C:\Users\Mohammad\Documents\GitHub\ImageSelector\obj\Debug\net10.0\compressed\2ba1tc0i22-{0}-zibvblaykk-zibvblaykk.gz
 C:\Users\Mohammad\Documents\GitHub\ImageSelector\obj\Debug\net10.0\compressed\7m8g6x3dpe-{0}-zibvblaykk-zibvblaykk.gz
 C:\Users\Mohammad\Documents\GitHub\ImageSelector\obj\Debug\net10.0\compressed\ou1fhkj2j3-{0}-dtxw8ight4-dtxw8ight4.gz
+C:\Users\Mohammad\Documents\GitHub\ImageSelector\obj\Debug\net10.0\ImageSelector.sourcelink.json
