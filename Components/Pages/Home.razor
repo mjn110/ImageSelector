@@ -1,0 +1,34 @@
+﻿@page "/"
+@inject IWebHostEnvironment Environment
+
+<PageTitle>Image Selector</PageTitle>
+
+<div class="row">
+    @foreach (var (imagePath, index) in GetImages().Select((path, i) => (path, i + 1)))
+    {
+        <div class="col-4 col-md-2 list-group-item p-3 p-0">
+            <input class="form-check-input me-1 img-selector-tick rounded-4" type="checkbox" value="" id="@index">
+            <label id="image" for="@index">
+                <img class="img-fluid rounded-4" src="@imagePath" alt="" srcset="">
+            </label>
+        </div>
+    }
+</div>
+
+@code {
+    private List<string> GetImages()
+    {
+        var imageExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".webp" };
+        var imagePath = Path.Combine(Environment.WebRootPath, "image");
+        
+        if (!Directory.Exists(imagePath))
+            return new List<string>();
+        
+        var imageFiles = Directory.GetFiles(imagePath)
+            .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
+            .Select(file => Path.Combine("image", Path.GetFileName(file)))
+            .ToList();
+        
+        return imageFiles;
+    }
+}
